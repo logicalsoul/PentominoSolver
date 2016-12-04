@@ -112,9 +112,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PentHand.cpp" />
+    <ClCompile Include="PentHandList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PentHand.h" />
+    <ClInclude Include="PentHandList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

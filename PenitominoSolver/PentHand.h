@@ -31,6 +31,7 @@ public:
 
 	bool operator==(PentHand) const;
 
+	Shape GetShape() { return shape; }
 	std::string ShapeStr(Shape);
 	std::string to_string();
 	bool IsSorted();

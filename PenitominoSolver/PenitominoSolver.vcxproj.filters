@@ -21,9 +21,15 @@
     <ClCompile Include="PentHand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PentHandList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PentHand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PentHandList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
