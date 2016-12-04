@@ -47,7 +47,6 @@ PentHandList::PentHandList(int r, int d)
 		}
 	}
 	NumOfHands = cnt;
-	counter = 0;
 }
 
 
@@ -68,21 +67,16 @@ bool PentHandList::InHands(int start, int end, PentHand p)
 	return false;
 }
 
-// 次の手を返す。戻り値は返す手があるかどうか
-bool PentHandList::Next(PentHand *out_p)
+// 指定番目の次の手を返す。戻り値は返す手があるかどうか
+bool PentHandList::GetHand(int num, PentHand *out_p) const
 {
-	while (counter < NumOfHands && !exists[hands[counter].GetShape()])
+	if (num < NumOfHands && exists[hands[num].GetShape()])
 	{
-		counter++;
-	}
-
-	if (counter >= NumOfHands)
-	{
-		return false;
+		*out_p = hands[num];
+		return true;
 	}
 	else
 	{
-		*out_p = hands[counter++];
-		return true;
+		return false;
 	}
 }

@@ -31,10 +31,11 @@ public:
 
 	bool operator==(PentHand) const;
 
-	Shape GetShape() { return shape; }
-	std::string ShapeStr(Shape);
-	std::string to_string();
-	bool IsSorted();
+	Shape GetShape() const { return shape; }
+	int GetPos(int i) const { return pos[i]; }
+	static std::string ShapeStr(Shape);
+	std::string to_string() const;
+	bool IsSorted() const;
 
 private:
 	static const std::string ShapeStrArray[];

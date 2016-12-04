@@ -8,16 +8,16 @@ public:
 	PentHandList(int, int);
 	~PentHandList();
 
-	 bool Next(PentHand*);
-	 void RemoveHand(PentHand p) { exists[p.GetShape()] = false; }
-	 void AddHand(PentHand p) { exists[p.GetShape()] = true; }
-	 void ResetCounter() { counter = 0; }
+	bool GetHand(int, PentHand*) const;
+	void RemoveHand(PentHand p) { exists[p.GetShape()] = false; }
+	void AddHand(PentHand p) { exists[p.GetShape()] = true; }
+
+	int GetNumOfHands() const { return NumOfHands; }
 
 private:
 
 	PentHand hands[480];	// ‚Æ‚è‚ ‚¦‚¸Å‘å’l‚Å—pˆÓ
 	int NumOfHands;
-	int counter;
 	bool exists[PentHand::NumOfShapes];
 
 	bool InHands(int, int, PentHand);

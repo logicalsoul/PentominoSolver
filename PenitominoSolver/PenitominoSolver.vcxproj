@@ -111,12 +111,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PentField.cpp" />
     <ClCompile Include="PentHand.cpp" />
     <ClCompile Include="PentHandList.cpp" />
+    <ClCompile Include="PentominoSolver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PentField.h" />
     <ClInclude Include="PentHand.h" />
     <ClInclude Include="PentHandList.h" />
+    <ClInclude Include="PentominoSolver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

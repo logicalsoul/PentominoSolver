@@ -224,7 +224,7 @@ std::string PentHand::ShapeStr(Shape s)
 }
 
 // デバッグ用文字列出力
-std::string PentHand::to_string()
+std::string PentHand::to_string() const
 {
 	std::string ret;
 	const int FieldSize = 9 * DownPos;
@@ -256,7 +256,7 @@ std::string PentHand::to_string()
 }
 
 // デバッグ用:ソート済かどうか
-bool PentHand::IsSorted()
+bool PentHand::IsSorted() const
 {
 	int i;
 

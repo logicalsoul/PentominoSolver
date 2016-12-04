@@ -1,16 +1,11 @@
 #include <iostream>
-#include "PentHandList.h"
+#include "PentominoSolver.h"
 
 int main()
 {
-	PentHandList plist(1, 10);
-	PentHand p;
+	PentominoSolver solver(10, 6);
 
-	while (plist.Next(&p))
-	{
-		std::cout << p.to_string() << std::endl;
-	}
-
+	std::cout << solver.Solve() << std::endl;
 	system("pause");
 
 	return 0;
