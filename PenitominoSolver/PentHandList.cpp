@@ -25,9 +25,9 @@ PentHandList::PentHandList(int r, int d)
 		tmp = cnt;
 		for (i = start; i < tmp; i++)
 		{
-			for (j = 1; j < 3; j++)		// ‰ñ“]Šp‚Í90, 180. 270‚Ì3‚Â
+			for (j = 1; j < 4; j++)		// ‰ñ“]Šp‚Í90, 180, 270‚Ì3‚Â
 			{
-				p = hands[i].Rotate(1);
+				p = hands[i].Rotate(j);
 				if (!InHands(start, cnt, p))
 				{
 					hands[cnt++] = p;
