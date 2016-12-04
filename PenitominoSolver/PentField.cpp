@@ -3,11 +3,20 @@
 PentField::PentField(int x, int y) : Xrange(x), Yrange(y), square_size(x * y)
 {
 	square = new Square[square_size];
+	
 
 	for (int i = 0; i < square_size; i++)
 	{
-		square[i].is_occupied = false;
-		square[i].shape = PentHand::NumOfShapes;	// ‚Ð‚Æ‚Ü‚¸‚ ‚è“¾‚È‚¢Œ`‚É‚µ‚Ä‚¨‚­
+		if (i < Xrange || i >= square_size - Xrange || i % Xrange == 0 || i % Xrange == Xrange - 1)
+		{
+			// •Ç
+			square[i].is_occupied = true;
+		}
+		else
+		{
+			square[i].is_occupied = false;
+		}
+		square[i].shape = PentHand::NumOfShapes;	// ‚Ð‚Æ‚Ü‚¸‘S•”•Ç‚Æ“¯‚¶’l‚É‚µ‚Ä‚¨‚­
 	}
 }
 
@@ -82,7 +91,15 @@ std::string PentField::to_string() const
 			pos = x + y * Xrange;
 			if (square[pos].is_occupied)
 			{
-				ret += PentHand::ShapeStr(square[pos].shape);
+				if (square[pos].shape < PentHand::NumOfShapes)
+				{
+					ret += PentHand::ShapeStr(square[pos].shape);
+				}
+				else
+				{
+					// •Ç
+					ret += "+";
+				}
 			}
 			else
 			{

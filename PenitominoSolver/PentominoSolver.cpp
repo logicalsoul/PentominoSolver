@@ -1,10 +1,11 @@
 #include "PentominoSolver.h"
 #include <iostream>
 
+// xrange x yrange の長方形の敷き詰め問題をセット
 PentominoSolver::PentominoSolver(int xrange, int yrange)
 {
-	field = new PentField(xrange, yrange);
-	handlist = new PentHandList(1, xrange);
+	field = new PentField(xrange + 2, yrange + 2);
+	handlist = new PentHandList(1, xrange + 2);
 }
 
 
